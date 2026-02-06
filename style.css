@@ -649,4 +649,57 @@ textarea.form-control {
   .product-grid-4 {
     grid-template-columns: 1fr;
   }
-}
+
+  /* --- Premium Section User Styles --- */
+  /* (Adapted from user paste to avoid conflicts) */
+
+  :root {
+    --primary: #d4af37;
+    /* Metallic Gold */
+    --primary-hover: #b4941f;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: 16px;
+  }
+
+  .serif-font {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .gold-text {
+    color: var(--primary);
+  }
+
+  .gold-border {
+    border-color: var(--primary);
+  }
+
+  .gold-bg {
+    background-color: var(--primary);
+  }
+
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+  }
+
+  .product-placeholder::after {
+    content: "PREMIUM TEXTILE";
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .stat-card {
+    border-left: 2px solid var(--primary);
+    padding-left: 1.5rem;
+  }
