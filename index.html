@@ -179,32 +179,407 @@
                 </div>
             </div>
 
-            <!-- Woven Apparel Section -->
-            <h3 class="subsection-title">Woven Apparel</h3>
-            <p class="section-subtitle" style="margin-bottom: 2rem;">Our Woven Apparel collection
-                includes high-quality pants, shirts, and casual wear designed for durability and style.</p>
+
+            <title>Premium Egyptian Cotton Textiles & Towels</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+                :root {
+                    --bg-dark: #0f172a;
+                    --bg-card: #1e293b;
+                    --bg-accent: #334155;
+                    --text-primary: #f8fafc;
+                    --text-secondary: #94a3b8;
+                    --text-muted: #64748b;
+                    --primary: #d4af37;
+                    /* Metallic Gold */
+                    --primary-hover: #b4941f;
+                    --secondary: #0ea5e9;
+                    --glass-bg: rgba(30, 41, 59, 0.7);
+                    --glass-border: rgba(255, 255, 255, 0.08);
+                    --glass-blur: 16px;
+                    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+
+                body {
+                    font-family: 'Outfit', sans-serif;
+                    background-color: var(--bg-dark);
+                    color: var(--text-primary);
+                    line-height: 1.6;
+                    scroll-behavior: smooth;
+                }
+
+                .serif-font {
+                    font-family: 'Playfair Display', serif;
+                }
+
+                .gold-text {
+                    color: var(--primary);
+                }
+
+                .gold-bg {
+                    background-color: var(--primary);
+                }
+
+                .glass-card {
+                    background: var(--glass-bg);
+                    backdrop-filter: blur(var(--glass-blur));
+                    border: 1px solid var(--glass-border);
+                    transition: var(--transition);
+                }
+
+                .glass-card:hover {
+                    border-color: var(--primary);
+                    transform: translateY(-8px);
+                }
+
+                .product-grid-4 {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                    gap: 1.5rem;
+                }
+
+                .product-image-container {
+                    aspect-ratio: 4/5;
+                    background: #111;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .product-image-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.6s ease;
+                    opacity: 0.85;
+                }
+
+                .glass-card:hover img {
+                    transform: scale(1.1);
+                    opacity: 1;
+                }
+
+                .stat-card {
+                    border-left: 2px solid var(--primary);
+                    padding-left: 1.5rem;
+                }
+
+                /* Hero Overlay Gradient */
+                .hero-gradient {
+                    background: linear-gradient(to right, #0f172a 30%, rgba(15, 23, 42, 0.7) 100%);
+                }
+            </style>
+            </head>
+
+            <body>
+
+                <!-- Header -->
+                <header class="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/5">
+                    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+                        <div class="serif-font text-2xl font-bold tracking-wider">
+                            EGYPTIAN <span class="gold-text">ITALIAN</span> CO.
+                        </div>
+                        <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-slate-400">
+                            <a href="#about" class="hover:text-white transition-colors">Heritage</a>
+                            <a href="#collections" class="hover:text-white transition-colors">Collections</a>
+                            <a href="#technical" class="hover:text-white transition-colors">Technical</a>
+                            <a href="#contact" class="gold-text">Contact</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+                    <div class="absolute inset-0 z-0">
+                        <!-- Background Image: High-end textile texture or loom -->
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000"
+                            alt="Textile background" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 hero-gradient"></div>
+                    </div>
+
+                    <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span
+                                class="gold-text uppercase tracking-[0.3em] font-semibold text-sm mb-4 block">WORLD-CLASS
+                                MANUFACTURE</span>
+                            <h1 class="serif-font text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+                                Elite Egyptian <br><span class="italic font-normal">Cotton Textiles</span>
+                            </h1>
+                            <p class="text-slate-300 text-lg mb-10 max-w-lg">
+                                A global leader in high-end home and hotel linen. Manufacturing 100% certified Egyptian
+                                cotton towels, bedding, and bathrobes for international export since 2025.
+                            </p>
+                            <div class="flex gap-4">
+                                <a href="#collections"
+                                    class="gold-bg text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-600 transition-colors uppercase text-xs tracking-widest">View
+                                    Catalog</a>
+                                <a href="#technical"
+                                    class="border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors uppercase text-xs tracking-widest backdrop-blur-sm">Our
+                                    Standards</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stats Bar -->
+                <section class="py-12 bg-slate-950 border-y border-white/5 relative z-10">
+                    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gold-text">1.25M m²</div>
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Monthly Production
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gold-text">6,000 Tons</div>
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Annual Capacity</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gold-text">250</div>
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Skilled Employees
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gold-text">$7.8M</div>
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Annual Revenue</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Collections Section -->
+                <section id="collections" class="py-24 bg-slate-900/30">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="text-center mb-20">
+                            <h2 class="serif-font text-4xl font-bold mb-4">Our Elite Collections</h2>
+                            <div class="w-20 h-1 gold-bg mx-auto mb-6"></div>
+                            <p class="text-slate-400 text-sm uppercase tracking-[0.2em]">Crafting Comfort. Defining
+                                Luxury.</p>
+                        </div>
+
+                        <!-- Hotel Linen Category -->
+                        <div class="mb-24">
+                            <div class="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
+                                <div>
+                                    <h3 class="serif-font text-3xl font-bold text-white">Hotel Luxury Linen</h3>
+                                    <p class="text-slate-500 text-sm mt-2">Engineered for prestige durability and
+                                        superior softness.</p>
+                                </div>
+                                <span
+                                    class="hidden md:block text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold border border-slate-700 px-3 py-1 rounded">Sulzertextil
+                                    TPS600 Technology</span>
+                            </div>
+                            <div class="product-grid-4">
+                                <!-- Hotel Product 1 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1629919048210-af3011a49871?auto=format&fit=crop&q=80&w=800"
+                                            alt="Luxury Hotel Bed Sheets">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Elite Bed Sheets</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Long-staple Egyptian
+                                        cotton for discerning suites.</p>
+                                </div>
+                                <!-- Hotel Product 2 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1544650039-22886fbb4323?auto=format&fit=crop&q=80&w=800"
+                                            alt="Premium White Towels">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">White Hotel Towels</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Maximum absorbency with
+                                        consistent plushness.</p>
+                                </div>
+                                <!-- Hotel Product 3 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800"
+                                            alt="Luxury Duvet Cover">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Signature Duvet Sets
+                                    </h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Solid and patterned
+                                        high-thread count weaves.</p>
+                                </div>
+                                <!-- Hotel Product 4 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?auto=format&fit=crop&q=80&w=800"
+                                            alt="Table Linens">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Banquet Table Linen</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">100% Cotton refinement
+                                        for fine dining.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Home Linen Category -->
+                        <div>
+                            <div class="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
+                                <div>
+                                    <h3 class="serif-font text-3xl font-bold text-white">Home & Leisure</h3>
+                                    <p class="text-slate-500 text-sm mt-2">Vibrant colors meeting exceptional quality
+                                        standards.</p>
+                                </div>
+                                <span
+                                    class="hidden md:block text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold border border-slate-700 px-3 py-1 rounded">Certified
+                                    Egyptian Cotton</span>
+                            </div>
+                            <div class="product-grid-4">
+                                <!-- Home Product 1 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1616091093714-c64882e9ab55?auto=format&fit=crop&q=80&w=800"
+                                            alt="Premium Bath Robes">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Luxury Bath Robes</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Meticulous detail for
+                                        home comfort.</p>
+                                </div>
+                                <!-- Home Product 2 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1520038410233-7141be7e6f97?auto=format&fit=crop&q=80&w=800"
+                                            alt="Beach Towels">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Beach Collections</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Innovative dual-texture
+                                        stylish designs.</p>
+                                </div>
+                                <!-- Home Product 3 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=800"
+                                            alt="Kitchen Linens">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Kitchen Essentials</h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">High-performance
+                                        absorbency for the chef.</p>
+                                </div>
+                                <!-- Home Product 4 -->
+                                <div class="glass-card p-4 rounded-2xl group">
+                                    <div class="product-image-container mb-5">
+                                        <img src="https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?auto=format&fit=crop&q=80&w=800"
+                                            alt="Colored Towels">
+                                    </div>
+                                    <h4 class="font-bold text-sm mb-1 uppercase tracking-wider">Colored Towel Series
+                                    </h4>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed italic">Colorfast technology in
+                                        diverse sizes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Excellence Section -->
+                <section id="technical" class="py-24 bg-slate-900/50">
+                    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div
+                                class="p-8 md:p-12 border border-white/5 bg-slate-900 rounded-[2.5rem] shadow-2xl relative">
+                                <div
+                                    class="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 gold-border opacity-30">
+                                </div>
+                                <h3 class="serif-font text-3xl font-bold mb-6 text-white">Technical Infrastructure</h3>
+                                <p class="text-slate-400 mb-10 leading-relaxed">
+                                    Evolved from a specialized printing factory, our facility now integrates advanced
+                                    laboratory testing for yarn, fabric, water resistance, and color matching.
+                                </p>
+                                <div class="space-y-8">
+                                    <div class="flex gap-6">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-slate-800 border border-white/5 flex items-center justify-center gold-text shrink-0 font-bold">
+                                            01</div>
+                                        <div>
+                                            <h5 class="font-bold uppercase text-[10px] tracking-widest mb-1 gold-text">
+                                                Advanced Machinery</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed italic">Featuring Swiss
+                                                Sulzertextil TPS600 technology for elite precision weaving.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-slate-800 border border-white/5 flex items-center justify-center gold-text shrink-0 font-bold">
+                                            02</div>
+                                        <div>
+                                            <h5 class="font-bold uppercase text-[10px] tracking-widest mb-1 gold-text">
+                                                Global Standards</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed italic">Full compliance
+                                                with BSCI, ISO 9001:2015, and OEKO-TEX Standard 100.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-slate-800 border border-white/5 flex items-center justify-center gold-text shrink-0 font-bold">
+                                            03</div>
+                                        <div>
+                                            <h5 class="font-bold uppercase text-[10px] tracking-widest mb-1 gold-text">
+                                                Expert Monitoring</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed italic">Technical
+                                                specialists supervise production from raw fibers to the final shipping
+                                                pallet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <span
+                                class="gold-text uppercase tracking-[0.3em] text-[10px] font-bold mb-6 block">INNOVATION
+                                & ARTISTRY</span>
+                            <h2 class="serif-font text-4xl font-bold mb-8 leading-tight">Uncompromising Quality Since
+                                Inception</h2>
+                            <p class="text-slate-400 mb-8 leading-relaxed text-lg">
+                                Our excellence is rooted in craftsmanship and state-of-the-art technology. We export
+                                high-quality materials and unique designs to Europe, the USA, and the Middle East,
+                                ensuring prompt delivery and competitive pricing globally.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                                    <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Global Reach
+                                    </div>
+                                    <div class="font-bold text-xs gold-text">EU / USA / MIDDLE EAST</div>
+                                </div>
+                                <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                                    <div class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Purity</div>
+                                    <div class="font-bold text-xs gold-text">100% CERTIFIED COTTON</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
-            <!-- Socks and Hosiery Category -->
-            <div class="category-block" style="margin-top: 4rem;">
-                <div class="category-header">
-                    <h4>Socks and Hosiery</h4>
-                    <p>Explore comfort and durability with Off Price Imports' Socks and Hosiery collection. Featuring
-                        premium materials for everyday wear, athletic performance, and formal elegance. Designed for
-                        breathability and lasting support, our collection offers the perfect blend of style and function
-                        for every occasion.</p>
+
+                <!-- Socks and Hosiery Category -->
+                <div class="category-block" style="margin-top: 4rem;">
+                    <div class="category-header">
+                        <h4>Socks and Hosiery</h4>
+                        <p>Explore comfort and durability with Off Price Imports' Socks and Hosiery collection.
+                            Featuring
+                            premium materials for everyday wear, athletic performance, and formal elegance. Designed
+                            for
+                            breathability and lasting support, our collection offers the perfect blend of style and
+                            function
+                            for every occasion.</p>
+                    </div>
+                    <div class="product-grid-4">
+                        <div class="product-card-simple"><img src="assets/images/socks_product_1.png"
+                                alt="Socks Product 1">
+                        </div>
+                        <div class="product-card-simple"><img src="assets/images/socks_product_2.png"
+                                alt="Socks Product 2">
+                        </div>
+                        <div class="product-card-simple"><img src="assets/images/socks_product_3.png"
+                                alt="Socks Product 3">
+                        </div>
+                        <div class="product-card-simple"><img src="assets/images/socks_product_4.png"
+                                alt="Socks Product 4">
+                        </div>
+                    </div>
                 </div>
-                <div class="product-grid-4">
-                    <div class="product-card-simple"><img src="assets/images/socks_product_1.png" alt="Socks Product 1">
-                    </div>
-                    <div class="product-card-simple"><img src="assets/images/socks_product_2.png" alt="Socks Product 2">
-                    </div>
-                    <div class="product-card-simple"><img src="assets/images/socks_product_3.png" alt="Socks Product 3">
-                    </div>
-                    <div class="product-card-simple"><img src="assets/images/socks_product_4.png" alt="Socks Product 4">
-                    </div>
-                </div>
-            </div>
         </div>
         </div>
     </section>

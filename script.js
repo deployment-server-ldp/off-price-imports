@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
     // Active link update based on scroll position
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -75,7 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         if (targetSection) {
             window.scrollTo({
                 top: targetSection.offsetTop - 80, // Offset for fixed header
