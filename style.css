@@ -602,9 +602,15 @@ textarea.form-control {
 
 /* 4-Picture Grid Layout */
 .product-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+
+.product-grid-4>* {
+  flex: 1 1 240px;
+  max-width: 300px;
 }
 
 .product-card-simple {
@@ -703,3 +709,4 @@ textarea.form-control {
     border-left: 2px solid var(--primary);
     padding-left: 1.5rem;
   }
+}
